@@ -1,5 +1,5 @@
 {
-    "name": "mycompany/sample-module-minimal",
+    "name": "cyildirim/atgmodule",
     "description": "A module that creates a page in the Magento admin ",
     "type": "magento2-module",
     "version": "1.0.1",
