@@ -1,0 +1,8 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue.xsd">
+
+    <topic name="customcatalog.product.remove" schema="Magento\Catalog\Api\Data\ProductInterface" publisher="default"/>
+    <consumer name="updateProductCopy" queue="customcatalog_product_remove" connection="amqp" class="Magento\Catalog\Api\ProductInterface"
+              method="updateProductCopy"/>
+    <bind queue="altayer_update_product_copy" exchange="magento" topic="customcatalog.product.remove" />
+</config>

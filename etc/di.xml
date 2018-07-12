@@ -1,0 +1,26 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="mycompany_exampleadminnewpage_store_listing_data_source" xsi:type="string">MyCompany\ExampleAdminNewPage\Model\ResourceModel\Store\Collection</item>
+                <item name="mycompany_exampleadminnewpage_cuscatalog_listing_data_source" xsi:type="string">MyCompany\ExampleAdminNewPage\Model\ResourceModel\CusCatalog\Collection</item>
+                <item name="cuscatalog_form_data_source" xsi:type="string">Magento\Catalog\Model\ResourceModel\Product\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="MyCompany\ExampleAdminNewPage\Model\ResourceModel\Store\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">cc_stores</argument>
+            <argument name="resourceModel" xsi:type="string">MyCompany\ExampleAdminNewPage\Model\ResourceModel\Store</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="MyCompany\ExampleAdminNewPage\Model\ResourceModel\CusCatalog\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">catalog_product_entity</argument>
+            <argument name="resourceModel" xsi:type="string">\Magento\Catalog\Model\ResourceModel\Product</argument>
+        </arguments>
+    </virtualType>
+    <preference for="MyCompany\ExampleAdminNewPage\Api\CusCatalogInterface" type="MyCompany\ExampleAdminNewPage\Model\CusCatalog" />
+</config>

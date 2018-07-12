@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MyCompany_ExampleAdminNewPage::greetings" title="Custom Catalog" translate="title" module="MyCompany_ExampleAdminNewPage" parent="Magento_Catalog::catalog" sortOrder="50" dependsOnModule="MyCompany_ExampleAdminNewPage" resource="MyCompany_ExampleAdminNewPage::greetings"/>
+
+        <!--<add id="MyCompany_ExampleAdminNewPage::greetings_helloworld" title="Hello World" translate="title" module="MyCompany_ExampleAdminNewPage" parent="MyCompany_ExampleAdminNewPage::greetings" sortOrder="10" dependsOnModule="MyCompany_ExampleAdminNewPage" action="mycompany_exampleadminnewpage/store" resource="MyCompany_ExampleAdminNewPage::greetings"/>-->
+
+        <!--<add id="MyCompany_ExampleAdminNewPage::customCatalog" title="CustomCatalog" translate="title" module="MyCompany_ExampleAdminNewPage" parent="Magento_Catalog::catalog" sortOrder="50" dependsOnModule="MyCompany_ExampleAdminNewPage" resource="MyCompany_ExampleAdminNewPage::customCatalog"/>-->
+        <add id="MyCompany_ExampleAdminNewPage::customCatalog_helloworld" title="Custom Catalog" translate="title" module="MyCompany_ExampleAdminNewPage" parent="MyCompany_ExampleAdminNewPage::greetings" sortOrder="10" dependsOnModule="MyCompany_ExampleAdminNewPage" action="mycompany_exampleadminnewpage/cuscatalog" resource="MyCompany_ExampleAdminNewPage::customCatalog"/>
+    </menu>
+</config>
