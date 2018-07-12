@@ -15,5 +15,7 @@
       "psr-4": {
         "MyCompany\\ExampleAdminNewPage\\": ""
       }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
   }
