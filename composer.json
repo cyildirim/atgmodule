@@ -1,6 +1,6 @@
 {
     "name": "mycompany/sample-module-minimal",
-    "description": "A module that creates a page in the Magento admin area",
+    "description": "A module that creates a page in the Magento admin ",
     "type": "magento2-module",
     "version": "1.0.1",
     "license": [
