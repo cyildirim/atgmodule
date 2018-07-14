@@ -16,6 +16,12 @@
         "MyCompany\\ExampleAdminNewPage\\": ""
       }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "extra": {
+      "map": [
+        [
+          "*",
+          "MyCompany/ExampleAdminNewPage"
+        ]
+      ]
+    }
   }
