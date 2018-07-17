@@ -35,8 +35,8 @@ class ProductUpdateConsumer implements \Rcason\Mq\Api\ConsumerInterface
 
             $product = $this->productRepository->getById($productObject['entity_id']);
 
-            $product->setCustomAttribute("vpn_number",$productObject['vpn_number']);
-            $product->setCustomAttribute("copy_write_info",$productObject['copy_write_info']);
+            $product->setData("vpn_number",$productObject['vpn_number']);
+            $product->setData("copy_write_info",$productObject['copy_write_info']);
             $this->productRepository->save($product);
             print_r($productObject['entity_id']." has been updated ");
 
